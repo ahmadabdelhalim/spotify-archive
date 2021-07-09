@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SpotifyArchive</title>
+    <title>Spotify Archive</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script data-search-pseudo-elements src="https://kit.fontawesome.com/3ebaf2334e.js"></script>
   </head>
 
-  <body>
+  <body class="<%= yield (:body_class) %>">
     <%= yield %>
   </body>
 </html>
